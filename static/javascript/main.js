@@ -1,21 +1,23 @@
 var deck = generateDeck();
+deck = shuffleArray(deck);
 var index = 0;
-document.getElementById("card").innerHTML = deck[0];
+var firstSourceLink = "static/images/" + deck[0];
+document.getElementById("card").setAttribute("src", firstSourceLink);
 
 function generateDeck() {
     var deck = [];
-    var suits = ["Clubs", "Hearts", "Spades", "Diamonds"];
+    var suits = ["clubs", "hearts", "spades", "diamonds"];
 
     // Iterate over each suit & value
     for (let suit in suits)
     {
-        deck.push("Ace of " + suits[suit]);
+        deck.push("ace_of_" + suits[suit] + ".png");
         for (let i = 2; i <= 10; i++) {
-            deck.push(i + " of " + suits[suit]);
+            deck.push(i + "_of_" + suits[suit] + ".png");
         }
-        deck.push("Jack of " + suits[suit]);
-        deck.push("Queen of " + suits[suit]);
-        deck.push("King of " + suits[suit]);
+        deck.push("jack_of_" + suits[suit] + ".png");
+        deck.push("queen_of_" + suits[suit] + ".png");
+        deck.push("king_of_" + suits[suit] + ".png");
     }
 
     return deck;
@@ -27,7 +29,20 @@ function next() {
     } else {
         index++;
     }
-    document.getElementById("card").innerHTML = deck[index];
+    var nextCard = deck[index];
+    var nextSrcLink = "static/images/" + nextCard;
+    document.getElementById("card").setAttribute("src", nextSrcLink);
+}
+
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
 }
 
 function bust() {
