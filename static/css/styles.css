@@ -1,3 +1,11 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    border: 5px solid black;
+}
+
 .title {
     text-align: center;
     padding: 2% 2% 2% 2%;
