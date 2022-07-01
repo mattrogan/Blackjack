@@ -68,10 +68,9 @@ function getValues()
 {
     var val1 = getCardValue(deck[firstCard]);
     var val2 = getCardValue(deck[secondCard]);
-    var total = val1 + val2;
+    var total = calcTotals(val1, val2);
     document.getElementById("card1value").innerHTML = val1;
     document.getElementById("card2value").innerHTML = val2;
-    document.getElementById("total").innerHTML = total;
 }
 
 var firstCard = 0;
