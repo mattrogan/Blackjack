@@ -78,7 +78,35 @@ function getValues()
     document.getElementById("total").innerHTML = total;
 }
 
-function calcTotal(val1, val2) { return val1 + val2; }
+function calcTotal(val1, val2) 
+{ 
+    if (val1 == val2 == "A")
+    {
+        return 11;
+    } else if (val1 == "A")
+    {
+        return closestToSeventeen(1+val2, 11+val2);
+    } else if (val2 == "A")
+    {
+        return closestToSeventeen(1+val1, 11+val1);
+    }
+    else
+    {
+        return val1 + val2;
+    }
+
+}
+
+function closestToSeventeen(val1, val2)
+{
+    if (Math.min(Math.abs(val1-17), Math.abs(val2-17)) == Math.abs(val1-17)){
+        return val1;
+    }
+    else
+    {
+        return val2;
+    }
+}
 
 var firstCard = 0;
 var secondCard = 1;
