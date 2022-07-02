@@ -1,3 +1,9 @@
+var firstCard = 0;
+var secondCard = 1;
+var deck = generateDeck();
+updateCards();
+getValues();
+
 function generateDeck() {
     var deck = [];
     var suits = ["clubs", "hearts", "spades", "diamonds"];
@@ -107,9 +113,3 @@ function closestToSeventeen(val1, val2)
         return val2;
     }
 }
-
-var firstCard = 0;
-var secondCard = 1;
-var deck = generateDeck();
-updateCards();
-getValues();
