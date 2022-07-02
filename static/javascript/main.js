@@ -87,7 +87,7 @@ function getValues()
 
 function calcTotal(val1, val2) 
 { 
-    if (val1 == val2 == "A")
+    if (val1 == "A" && val2 == "A")
     {
         return 11;
     } else if (val1 == "A")
