@@ -68,7 +68,7 @@ function getValues()
 {
     var val1 = getCardValue(deck[firstCard]);
     var val2 = getCardValue(deck[secondCard]);
-    var total = val1 + val2;
+    var total = calcTotal(val1, val2);
     if (total > 21)
     {
         total = "BUST";
@@ -77,6 +77,8 @@ function getValues()
     document.getElementById("card2value").innerHTML = val2;
     document.getElementById("total").innerHTML = total;
 }
+
+function calcTotal(val1, val2) { return val1 + val2; }
 
 var firstCard = 0;
 var secondCard = 1;
