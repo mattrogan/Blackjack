@@ -7,18 +7,24 @@
     </head>
 
     <body>
-        <p>First card</p>
-        <img id="currentCard1" src="" width="111" height-"161"></img>
-        <p>Second card</p>
-        <img id="currentCard2" src="" width="111" height="161"></img>
-        <br>
-        <p>Value of first card</p>
-        <p id="card1value"></p>
-        <p>Value of second card</p>
-        <p id="card2value"></p>
-        <p>Combined value of cards</p>
-        <p id="total"></p>
-        <button onclick="nextCard()">Hit</button>
+        <div class="card-container">
+            <p>First card</p>
+            <img id="currentCard1" src="" width="111" height-"161"></img>
+            <p>Second card</p>
+            <img id="currentCard2" src="" width="111" height="161"></img>
+            <br>
+        </div>
+
+        <div class="score-container">
+            <p>Value of first card</p>
+            <p id="card1value"></p>
+            <p>Value of second card</p>
+            <p id="card2value"></p>
+            <p>Combined value of cards</p>
+            <p id="total"></p>
+            <button onclick="nextCard()">Hit</button>
+        </div>
+        
         <script src="static/javascript/main.js"></script>
     </body>
 
