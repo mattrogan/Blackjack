@@ -1,6 +1,7 @@
 var firstCard = 0;
 var secondCard = 1;
 var deck = generateDeck();
+var sourcePath = "/static/images/"
 updateCards();
 getValues();
 
@@ -26,8 +27,8 @@ function generateDeck() {
 
 function updateCards()
 {
-    document.getElementById("currentCard1").innerHTML = deck[firstCard];
-    document.getElementById("currentCard2").innerHTML = deck[secondCard];
+    document.getElementById("currentCard1").setAttribute("src", sourcePath+deck[firstCard]);
+    document.getElementById("currentCard2").setAttribute("src", sourcePath+deck[secondCard]);
 }
 
 function nextCard() 
