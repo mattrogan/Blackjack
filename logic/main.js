@@ -68,7 +68,7 @@ function getValues()
 {
     var val1 = getCardValue(deck[firstCard]);
     var val2 = getCardValue(deck[secondCard]);
-    var total = calcTotal(val1, val2);
+    var total = val1 + val2;
     if (total > 21)
     {
         total = "BUST";
@@ -76,26 +76,6 @@ function getValues()
     document.getElementById("card1value").innerHTML = val1;
     document.getElementById("card2value").innerHTML = val2;
     document.getElementById("total").innerHTML = total;
-}
-
-function calcTotal(val1, val2)
-{
-    if (val1 == val2 == "A"){
-        return 11
-    }
-    else if (val1 == "A") {
-        return closestToSeventeen(1+val2, 11+val2);
-    }
-    else {
-        return closestToSeventeen(1+val1, 11+val1);
-    }
-}
-
-function closestToSeventeen(plusOne, plusEleven)
-{
-    plusOne = Math.abs(plusOne-17);
-    plusEleven = Math.abs(plusEleven-17);
-    return Math.min(plusOne, plusEleven);
 }
 
 var firstCard = 0;
