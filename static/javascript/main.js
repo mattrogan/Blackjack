@@ -33,8 +33,8 @@ function updateCards()
 
 function nextCard() 
 { 
-    firstCard = (firstCard + 1) % 52;
-    secondCard = (secondCard + 1) % 52;
+    firstCard = (firstCard + 2) % 52;
+    secondCard = (secondCard + 2) % 52;
     updateCards();
     getValues();
 }
@@ -92,10 +92,10 @@ function calcTotal(val1, val2)
         return 11;
     } else if (val1 == "A")
     {
-        return closestToSeventeen(1+val2, 11+val2);
+        return closestToTwentyOne(1+val2, 11+val2);
     } else if (val2 == "A")
     {
-        return closestToSeventeen(1+val1, 11+val1);
+        return closestToTwentyOne(1+val1, 11+val1);
     }
     else
     {
@@ -104,9 +104,9 @@ function calcTotal(val1, val2)
 
 }
 
-function closestToSeventeen(val1, val2)
+function closestToTwentyOne(val1, val2)
 {
-    if (Math.min(Math.abs(val1-17), Math.abs(val2-17)) == Math.abs(val1-17)){
+    if (Math.min(Math.abs(val1-21), Math.abs(val2-21)) == Math.abs(val1-21)){
         return val1;
     }
     else

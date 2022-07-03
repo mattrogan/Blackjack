@@ -1,0 +1,6 @@
+[X] Change current cards to increment by 2
+[ ] Add third card
+[ ] Calculate "bust"-ness
+[ ] Add stakes to bet 'chips'
+[ ] Add home page
+[ ] Add game over page if run out of 'chips'
